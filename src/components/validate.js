@@ -33,8 +33,8 @@ export const validate = (data) => {
       delete errors.confirmPassword;
   }
 
-  if (data.isAccepted) {
-      errors.isAccepted = "Please accept our policy."
+  if (!data.isAccepted) {
+    errors.isAccepted = "Please accept our policy."
   } else {
       delete errors.isAccepted;
   }

@@ -1,0 +1,185 @@
+*{
+ font-family: sans-serif;
+ 
+ color: rgb(135, 135, 135);
+}
+.container{
+    display: flex;
+    background-color: rgb(254, 218, 223);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer{
+    background-color: #DAFEF9;
+    width: fit-content;
+    height: fit-content;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border: 2px solid #ace8e0;
+    box-shadow: 8px 8px 16px rgb(255, 255, 255), -8px -8px 16px rgb(255, 255, 255);
+    
+}
+
+.header{
+ font-size: 2.2em;
+ text-align: left;
+}
+
+.formField{
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em 0;
+}
+
+.formField label{
+    text-align: left;
+    padding: 0.5em 0;
+}
+
+.formInput:focus,
+.uncompleted:focus{
+    border: 2px solid rgb(76, 142, 189);
+    outline: none;
+}
+
+.formInput{
+    height: 30px;
+    width: 300px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 5px 5px 10px  ;
+    border: 2px solid rgb(178, 243, 245);
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+
+.uncompleted{
+    height: 30px;
+    width: 300px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 5px 5px 10px  ;
+    border: 2px solid rgb(252, 164, 164);
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+
+.formField span{
+    color: red;
+    line-height: 20px;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: rgb(255, 213, 213);
+    text-align: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 0.3em 1em;
+    margin-top: 1em;
+    font-size: 0.7em;
+}
+
+.checkboxContainer{
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    margin-top: 1em;
+}
+
+input[type="checkbox"]{
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 2px solid rgb(178, 243, 245);
+    background-color: #fff;
+    box-shadow: 2px 2px 4px;
+    appearance: none;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+
+input[type="checkbox"]:checked{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: rgb(245, 114, 131);
+}
+
+.formButtons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    align-items: center;
+}
+
+.formButtons button{
+    background-color: rgb(254, 218, 223);
+    outline: none;
+    padding: 0.6em 2.5em;
+    border: 2px solid rgb(178, 243, 245);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 5px 5px 8px;
+    font-size: 1rem;
+}
+
+.formButtons button:hover{
+    background-color: #ace8e0;
+}
+
+.formButtons a{
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+@media (max-width: 440px){
+    .formContainer{
+        padding: 20px ;
+        margin: 50px 20px;
+        width: 90%;
+    }
+    .formInput{
+        width: 90%;
+    }
+    .uncompleted{
+        width: 90%;
+    }
+    button[type="submit"]{
+        width: 90%;
+    }
+}
