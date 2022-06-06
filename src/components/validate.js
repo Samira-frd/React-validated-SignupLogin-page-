@@ -1,11 +1,7 @@
-export const validate = (data) => {
+export const validate = (data, type) => {
   const errors = {};
 
-  if (!data.name.trim()) {
-    errors.name = "Username is required.";
-  } else {
-    delete errors.name;
-  }
+  
 
   if (!data.email) {
     errors.email = "Email is required.";
@@ -23,21 +19,30 @@ export const validate = (data) => {
       errors.password = "Password cannot be less than 6 characters."
   } else {
       delete errors.password;
+  }                                                                                                
+
+  if (type === "submit") {
+
+    if (!data.name.trim()) {
+      errors.name = "Username is required.";
+    } else {
+      delete errors.name;
+    }
+   if (!data.confirmPassword) {
+        errors.confirmPassword = "Confirm Password is required."
+    } else if(data.confirmPassword !== data.password) {
+        errors.confirmPassword = "Passwords do not match."
+    } else {
+        delete errors.confirmPassword;
+    }
+  
+    if (!data.isAccepted) {
+      errors.isAccepted = "Please accept our policy."
+    } else {
+        delete errors.isAccepted;
+    }
   }
 
-  if (!data.confirmPassword) {
-      errors.confirmPassword = "Confirm Password is required."
-  } else if(data.confirmPassword !== data.password) {
-      errors.confirmPassword = "Passwords do not match."
-  } else {
-      delete errors.confirmPassword;
-  }
-
-  if (!data.isAccepted) {
-    errors.isAccepted = "Please accept our policy."
-  } else {
-      delete errors.isAccepted;
-  }
 
   return errors;
 };
